@@ -45,7 +45,9 @@ const Services: React.FC = () => {
     if (typeof window === "undefined") return;
 
     const ctx = gsap.context(() => {
-      scrollReveal(titleRef.current);
+      if (titleRef.current) {
+        scrollReveal(titleRef.current);
+      }
       const cards = cardsRef.current?.children;
       if (cards) {
         staggerFadeIn(Array.from(cards), 0.15);

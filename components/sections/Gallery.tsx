@@ -22,7 +22,9 @@ const Gallery: React.FC = () => {
     if (typeof window === "undefined") return;
 
     const ctx = gsap.context(() => {
-      scrollReveal(titleRef.current);
+      if (titleRef.current) {
+        scrollReveal(titleRef.current);
+      }
       const items = gridRef.current?.children;
       if (items) {
         staggerFadeIn(Array.from(items), 0.1);

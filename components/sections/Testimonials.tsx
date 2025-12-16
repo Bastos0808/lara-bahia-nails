@@ -37,7 +37,9 @@ const Testimonials: React.FC = () => {
     if (typeof window === "undefined") return;
 
     const ctx = gsap.context(() => {
-      scrollReveal(titleRef.current);
+      if (titleRef.current) {
+        scrollReveal(titleRef.current);
+      }
     }, sectionRef);
 
     return () => ctx.revert();
