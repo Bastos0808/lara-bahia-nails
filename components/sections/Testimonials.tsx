@@ -91,7 +91,7 @@ const Testimonials: React.FC = () => {
                 ))}
               </div>
               <p className="text-lg text-blue-dark/80 mb-6 italic">
-                "{testimonials[currentIndex].text}"
+                &ldquo;{testimonials[currentIndex].text}&rdquo;
               </p>
               <p className="text-blue-dark font-semibold">
                 — {testimonials[currentIndex].name}
