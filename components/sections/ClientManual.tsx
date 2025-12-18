@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap, scrollReveal, staggerFadeIn } from "@/lib/gsap";
 import Card from "@/components/ui/Card";
-import { FiClock, FiAlertCircle, FiDollarSign, FiCalendar, FiXCircle } from "react-icons/fi";
+import { FiClock, FiAlertCircle, FiDollarSign, FiCalendar, FiCheckCircle } from "react-icons/fi";
 
 const ClientManual: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -36,10 +36,10 @@ const ClientManual: React.FC = () => {
         "É recomendado deixar a manutenção marcada ao final de todo atendimento.",
     },
     {
-      icon: FiXCircle,
-      title: "Cancelamentos",
+      icon: FiCheckCircle,
+      title: "Agendamentos",
       description:
-        "Desmarques com menos de 3 horas de antecedência serão reagendados somente mediante o sinal de 30% do valor total do atendimento.",
+        "Para realizarmos os agendamentos de qualquer procedimento será cobrado um sinal de R$ 30,00 que será subtraído do valor total do procedimento ao final do atendimento.",
     },
   ];
 
@@ -63,7 +63,7 @@ const ClientManual: React.FC = () => {
     <section
       id="manual"
       ref={sectionRef}
-      className="py-12 sm:py-16 md:py-24 bg-white"
+      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-blue-lighter/20 to-blue-lighter/50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">

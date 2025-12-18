@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "@/lib/gsap";
 import Button from "@/components/ui/Button";
 import { smoothScrollTo } from "@/lib/utils";
+import Silk from "@/components/ui/Silk";
 
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -41,27 +42,33 @@ const Hero: React.FC = () => {
     <section
       id="hero"
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-pink-lighter to-blue-lighter"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
     >
-      {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-4 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-pink-accent/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-4 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-blue-dark/10 rounded-full blur-3xl"></div>
+      {/* Background Effect */}
+      <div className="absolute inset-0 z-0">
+        <Silk 
+          color="#003E7D" 
+          speed={5.5} 
+          scale={1.2} 
+          noiseIntensity={0.5} 
+        />
+        {/* Soft overlay to ensure readability */}
+        <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 pb-32">
         <h1
           ref={titleRef}
-          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-serif text-blue-dark mb-4 sm:mb-6 leading-tight px-2"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-serif text-white mb-4 sm:mb-6 leading-tight px-2"
         >
           Transforme suas Unhas
           <br />
-          <span className="text-blue-dark">em Obras de Arte</span>
+          <span className="text-pink-lighter">em Obras de Arte</span>
         </h1>
 
         <p
           ref={subtitleRef}
-          className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-dark/80 mb-6 sm:mb-10 max-w-3xl mx-auto px-4"
+          className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-10 max-w-3xl mx-auto px-4"
         >
           Design de unhas profissional com técnicas modernas e delicadas.
           Cada detalhe é pensado para realçar sua beleza única.
@@ -71,7 +78,7 @@ const Hero: React.FC = () => {
           <Button
             size="lg"
             onClick={() => smoothScrollTo("contact")}
-            className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
+            className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto bg-pink-accent hover:bg-pink-dark border-none"
           >
             Agendar Agora
           </Button>
@@ -79,7 +86,7 @@ const Hero: React.FC = () => {
             variant="outline"
             size="lg"
             onClick={() => smoothScrollTo("services-detailed")}
-            className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
+            className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto text-white border-white hover:bg-white/10"
           >
             Conhecer Serviços
           </Button>
@@ -88,8 +95,8 @@ const Hero: React.FC = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
-        <div className="w-6 h-10 border-2 border-blue-dark rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-blue-dark rounded-full"></div>
+        <div className="w-6 h-10 border-2 border-white rounded-full flex items-start justify-center p-2">
+          <div className="w-1 h-3 bg-white rounded-full"></div>
         </div>
       </div>
     </section>

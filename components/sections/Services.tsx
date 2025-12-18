@@ -28,16 +28,16 @@ const Services: React.FC = () => {
     {
       icon: FiAward,
       title: "Blindagem",
-      price: "R$ 100",
+      price: "R$ 75",
       description:
         "Facilita o crescimento das unhas naturais e evita unhas quebradas.",
     },
     {
       icon: FiStar,
-      title: "Esmaltação em Gel",
-      price: "R$ 65",
+      title: "Blindagem + Esmaltação em Gel",
+      price: "R$ 85",
       description:
-        "Mais duração que o esmalte convencional com secagem imediata.",
+        "O combo perfeito: a resistência da blindagem com o acabamento impecável do gel.",
     },
   ];
 
@@ -61,7 +61,7 @@ const Services: React.FC = () => {
     <section
       id="services"
       ref={sectionRef}
-      className="py-12 sm:py-16 md:py-24 bg-white"
+      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-blue-lighter/15 to-blue-lighter/30"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">

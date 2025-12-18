@@ -1,8 +1,11 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import { cn } from "@/lib/utils";
 import { gsap, scrollReveal } from "@/lib/gsap";
 import Image from "next/image";
+
+import Card from "@/components/ui/Card";
 
 const ServicesDetailed: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -42,7 +45,7 @@ const ServicesDetailed: React.FC = () => {
     {
       id: "blindagem",
       title: "Blindagem",
-      price: "R$ 100",
+      price: "R$ 75",
       description:
         "Tratamento especializado que facilita o crescimento das unhas naturais e evita quebras. Perfeito para unhas que precisam de fortalecimento.",
       benefits: [
@@ -55,18 +58,18 @@ const ServicesDetailed: React.FC = () => {
       reverse: false,
     },
     {
-      id: "esmaltacao-gel",
-      title: "Esmaltação em Gel",
-      price: "R$ 65",
+      id: "blindagem-esmaltacao",
+      title: "Blindagem + Esmaltação em Gel",
+      price: "R$ 85",
       description:
-        "Esmaltação de alta qualidade com secagem imediata. Muito mais duradoura que o esmalte convencional, mantendo suas unhas perfeitas por semanas.",
+        "O combo perfeito para quem busca proteção e beleza. A blindagem fortalece a unha natural enquanto a esmaltação em gel garante brilho e cor por muito mais tempo.",
       benefits: [
+        "Fortalecimento e cor",
+        "Alta durabilidade",
+        "Brilho intenso e duradouro",
         "Secagem imediata",
-        "Maior duração",
-        "Brilho intenso",
-        "Variedade de cores",
       ],
-      image: "/images/services/esmaltacao-gel/main.jpg",
+      image: "/images/services/blindagem/main.jpg",
       reverse: true,
     },
   ];
@@ -98,7 +101,7 @@ const ServicesDetailed: React.FC = () => {
     <section
       id="services-detailed"
       ref={sectionRef}
-      className="py-12 sm:py-16 md:py-24 bg-white"
+      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-pink-lighter/20 to-pink-lighter/40"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
@@ -116,11 +119,12 @@ const ServicesDetailed: React.FC = () => {
         <div className="space-y-16 sm:space-y-20 md:space-y-24">
           {services.map((service, index) => {
             return (
-              <div
+              <Card 
                 key={service.id}
-                className={`service-card flex flex-col ${
+                className={cn(
+                  "service-card flex flex-col items-center gap-8 lg:gap-12 border-none p-8 sm:p-10",
                   service.reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-                } items-center gap-8 lg:gap-12`}
+                )}
               >
                 {/* Imagem com degradê */}
                 <div className="w-full lg:w-1/2 relative group">
@@ -150,7 +154,7 @@ const ServicesDetailed: React.FC = () => {
                       {service.title}
                     </h3>
                     <div className="mb-4">
-                      <span className="relative inline-block px-3 py-2">
+                      <span className="relative inline-block">
                         <span className="relative text-2xl sm:text-3xl font-bold text-pink-accent">{service.price}</span>
                       </span>
                     </div>
@@ -177,7 +181,7 @@ const ServicesDetailed: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </Card>
             );
           })}
         </div>

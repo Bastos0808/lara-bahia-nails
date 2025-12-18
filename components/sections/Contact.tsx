@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-pink-lighter/30 to-white"
+      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-pink-lighter/30 to-pink-lighter/60"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
         </div>
 
         <div ref={buttonsRef} className="max-w-2xl mx-auto space-y-6">
-          <Card className="bg-white text-center border-2 border-pink-accent/30">
+          <Card className="text-center">
             <h3 className="text-2xl sm:text-3xl font-serif font-semibold mb-4">
               <span className="relative inline-block px-4 py-2">
                 <span
@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
               variant="secondary"
               size="lg"
               onClick={() => openWhatsApp()}
-              className="w-full sm:w-auto bg-[rgba(251,179,255,1)] bg-none text-[rgba(255,255,255,0.8)] hover:bg-[rgba(251,179,255,1)] hover:text-[rgba(255,255,255,0.8)] px-8"
+              className="w-full sm:w-auto bg-[rgba(208,114,213,1)] bg-none text-[rgba(255,255,255,0.8)] hover:bg-[rgba(208,114,213,1)] hover:text-[rgba(255,255,255,0.8)] px-8"
             >
               <FaWhatsapp className="inline mr-2" size={20} />
               Abrir WhatsApp

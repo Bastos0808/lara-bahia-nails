@@ -67,7 +67,7 @@ const Testimonials: React.FC = () => {
     <section
       id="testimonials"
       ref={sectionRef}
-      className="py-12 sm:py-16 md:py-24 bg-white"
+      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-blue-lighter/40 to-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
@@ -103,7 +103,7 @@ const Testimonials: React.FC = () => {
 
           <button
             onClick={goToPrevious}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-8 sm:-translate-x-12 md:-translate-x-16 bg-white rounded-full p-2 sm:p-3 shadow-lg hover:bg-pink-lighter transition-colors z-10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-8 sm:-translate-x-12 md:-translate-x-16 bg-white/40 backdrop-blur-md rounded-full p-2 sm:p-3 shadow-lg hover:bg-white/60 transition-colors z-10"
             aria-label="Depoimento anterior"
           >
             <FiChevronLeft className="text-blue-dark text-xl sm:text-2xl" />
@@ -111,7 +111,7 @@ const Testimonials: React.FC = () => {
 
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-8 sm:translate-x-12 md:translate-x-16 bg-white rounded-full p-2 sm:p-3 shadow-lg hover:bg-pink-lighter transition-colors z-10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-8 sm:translate-x-12 md:translate-x-16 bg-white/40 backdrop-blur-md rounded-full p-2 sm:p-3 shadow-lg hover:bg-white/60 transition-colors z-10"
             aria-label="Próximo depoimento"
           >
             <FiChevronRight className="text-blue-dark text-xl sm:text-2xl" />

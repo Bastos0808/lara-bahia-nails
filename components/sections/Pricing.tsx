@@ -11,17 +11,17 @@ const Pricing: React.FC = () => {
   const decorationsRef = useRef<HTMLDivElement>(null);
 
   const applicationServices = [
-    { name: "Fibra", price: "R$ 180" },
-    { name: "Banho", price: "R$ 130" },
-    { name: "Blindagem", price: "R$ 75" },
-    { name: "Blindagem + esm. gel", price: "R$ 85" },
+    { name: "fibra", price: "R$ 180" },
+    { name: "banho", price: "R$ 130" },
+    { name: "blindagem", price: "R$ 75" },
+    { name: "blindagem + esm. gel.", price: "R$ 85" },
   ];
 
   const maintenanceServices = [
-    { name: "Fibra", price: "R$ 140" },
+    { name: "fibra", price: "R$ 140" },
     { name: "Banho", price: "R$ 130" },
     { name: "Blindagem", price: "R$ 75" },
-    { name: "Blindagem + esm. gel", price: "R$ 85" },
+    { name: "Blindagem + esm. gel.", price: "R$ 85" },
   ];
 
   const decorationsSimple = {
@@ -58,7 +58,7 @@ const Pricing: React.FC = () => {
     <section
       id="pricing"
       ref={sectionRef}
-      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-pink-lighter/30"
+      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-pink-lighter/20 to-pink-lighter/40"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
@@ -90,17 +90,6 @@ const Pricing: React.FC = () => {
                 </span>
               </h3>
               <div className="space-y-4 sm:space-y-6">
-                <div className="bg-blue-light/5 rounded-2xl p-4 sm:p-5 border border-blue-dark/5">
-                  <h4 className="text-base sm:text-lg font-semibold text-blue-dark mb-3">
-                    Agendamentos
-                  </h4>
-                  <p className="text-sm sm:text-base text-blue-dark/80 leading-relaxed">
-                    Para realizarmos os agendamentos de qualquer procedimento será cobrado
-                    um sinal de <span className="font-semibold text-blue-dark">R$ 30,00</span>,
-                    que será abatido do valor total ao final do atendimento.
-                  </p>
-                </div>
-
                 <div>
                   <h4 className="text-base sm:text-lg font-semibold text-blue-dark mb-3">
                     Aplicações
@@ -160,7 +149,7 @@ const Pricing: React.FC = () => {
                 {[decorationsSimple, decorationsSpecial].map((group, idx) => (
                   <div
                     key={idx}
-                    className="rounded-2xl p-4 sm:p-5 border border-blue-dark/10 bg-white/60 shadow-sm"
+                    className="rounded-2xl p-4 sm:p-5 border border-white/50 bg-white/40 backdrop-blur-xl backdrop-saturate-150 shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     <div className="flex items-center justify-between mb-3 sm:mb-4">
                       <div>

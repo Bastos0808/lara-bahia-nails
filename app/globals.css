@@ -15,11 +15,6 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Scroll suave será controlado pelo GSAP */
-html, body {
-  scroll-behavior: auto;
-}
-
 body {
   font-family: var(--font-montserrat), sans-serif;
   color: #003E7D;

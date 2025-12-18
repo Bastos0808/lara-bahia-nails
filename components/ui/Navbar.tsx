@@ -36,13 +36,15 @@ const Navbar: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white/95 backdrop-blur-md shadow-md"
-          : "bg-transparent"
+          : "bg-black/40 backdrop-blur-md border-b border-white/10"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <div
-            className="text-lg sm:text-xl md:text-2xl font-serif text-blue-dark cursor-pointer"
+            className={`text-lg sm:text-xl md:text-2xl font-serif cursor-pointer transition-colors duration-300 ${
+              isScrolled ? "text-blue-dark" : "text-white"
+            }`}
             onClick={() => handleNavClick("hero")}
           >
             Lara Bahia Nails
@@ -54,7 +56,9 @@ const Navbar: React.FC = () => {
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className="text-blue-dark hover:text-pink-accent transition-colors duration-200 font-medium"
+                className={`transition-colors duration-200 font-medium ${
+                  isScrolled ? "text-blue-dark hover:text-pink-accent" : "text-white hover:text-pink-lighter"
+                }`}
               >
                 {link.label}
               </button>
@@ -63,7 +67,9 @@ const Navbar: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-blue-dark"
+            className={`md:hidden transition-colors duration-300 ${
+              isScrolled ? "text-blue-dark" : "text-white"
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
