@@ -23,6 +23,7 @@ const Navbar: React.FC = () => {
     { id: "pricing", label: "Preços" },
     { id: "testimonials", label: "Depoimentos" },
     { id: "manual", label: "Manual" },
+    { id: "location", label: "Localização" },
     { id: "contact", label: "Contato" },
   ];
 

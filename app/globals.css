@@ -13,13 +13,19 @@
 html {
   scroll-behavior: auto;
   -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
   font-family: var(--font-montserrat), sans-serif;
   color: #003E7D;
-  background-color: #FFFFFF;
+  background-color: #FFFAFF;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 body::before,

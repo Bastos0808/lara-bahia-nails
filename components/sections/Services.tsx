@@ -61,7 +61,7 @@ const Services: React.FC = () => {
     <section
       id="services"
       ref={sectionRef}
-      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-blue-lighter/5"
+      className="py-12 sm:py-16 md:py-24 bg-[#FFFAFF]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
