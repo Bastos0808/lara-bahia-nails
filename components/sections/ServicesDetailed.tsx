@@ -1,11 +1,8 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { cn } from "@/lib/utils";
 import { gsap, scrollReveal } from "@/lib/gsap";
 import Image from "next/image";
-
-import Card from "@/components/ui/Card";
 
 const ServicesDetailed: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -101,7 +98,7 @@ const ServicesDetailed: React.FC = () => {
     <section
       id="services-detailed"
       ref={sectionRef}
-      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-pink-lighter/20 to-pink-lighter/40"
+      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-pink-lighter/10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
@@ -119,12 +116,11 @@ const ServicesDetailed: React.FC = () => {
         <div className="space-y-16 sm:space-y-20 md:space-y-24">
           {services.map((service, index) => {
             return (
-              <Card 
+              <div
                 key={service.id}
-                className={cn(
-                  "service-card flex flex-col items-center gap-8 lg:gap-12 border-none p-8 sm:p-10",
+                className={`service-card flex flex-col ${
                   service.reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-                )}
+                } items-center gap-8 lg:gap-12`}
               >
                 {/* Imagem com degradê */}
                 <div className="w-full lg:w-1/2 relative group">
@@ -154,7 +150,7 @@ const ServicesDetailed: React.FC = () => {
                       {service.title}
                     </h3>
                     <div className="mb-4">
-                      <span className="relative inline-block">
+                      <span className="relative inline-block px-3 py-2">
                         <span className="relative text-2xl sm:text-3xl font-bold text-pink-accent">{service.price}</span>
                       </span>
                     </div>
@@ -181,7 +177,7 @@ const ServicesDetailed: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-              </Card>
+              </div>
             );
           })}
         </div>

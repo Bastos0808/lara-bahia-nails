@@ -152,10 +152,10 @@ const Gallery: React.FC = () => {
               e.stopPropagation();
               navigateImage("prev");
             }}
-            className="absolute left-4 text-white hover:text-pink-accent transition-colors z-10"
+            className="absolute left-2 sm:left-4 text-white hover:text-pink-accent transition-colors z-10"
             aria-label="Imagem anterior"
           >
-            <FiChevronLeft size={40} />
+            <FiChevronLeft className="text-3xl sm:text-5xl" />
           </button>
 
           <button
@@ -163,10 +163,10 @@ const Gallery: React.FC = () => {
               e.stopPropagation();
               navigateImage("next");
             }}
-            className="absolute right-4 text-white hover:text-pink-accent transition-colors z-10"
+            className="absolute right-2 sm:right-4 text-white hover:text-pink-accent transition-colors z-10"
             aria-label="Próxima imagem"
           >
-            <FiChevronRight size={40} />
+            <FiChevronRight className="text-3xl sm:text-5xl" />
           </button>
 
           <div

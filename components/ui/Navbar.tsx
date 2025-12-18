@@ -83,12 +83,12 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-4 space-y-2">
+          <div className="md:hidden pb-4 space-y-2 animate-fade-in bg-white/80 backdrop-blur-lg rounded-xl mt-2 p-2 border border-white/20 shadow-xl">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className="block w-full text-left px-4 py-2 text-blue-dark hover:bg-pink-lighter rounded-lg transition-colors"
+                className="block w-full text-left px-4 py-3 text-blue-dark hover:bg-pink-lighter/50 rounded-lg transition-colors font-medium"
               >
                 {link.label}
               </button>

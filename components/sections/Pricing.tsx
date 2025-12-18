@@ -58,7 +58,7 @@ const Pricing: React.FC = () => {
     <section
       id="pricing"
       ref={sectionRef}
-      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-pink-lighter/20 to-pink-lighter/40"
+      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-pink-lighter/30"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
@@ -149,7 +149,7 @@ const Pricing: React.FC = () => {
                 {[decorationsSimple, decorationsSpecial].map((group, idx) => (
                   <div
                     key={idx}
-                    className="rounded-2xl p-4 sm:p-5 border border-white/50 bg-white/40 backdrop-blur-xl backdrop-saturate-150 shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="rounded-2xl p-4 sm:p-5 border border-white/20 bg-white/40 backdrop-blur-md shadow-sm hover:shadow-md transition-all duration-300"
                   >
                     <div className="flex items-center justify-between mb-3 sm:mb-4">
                       <div>

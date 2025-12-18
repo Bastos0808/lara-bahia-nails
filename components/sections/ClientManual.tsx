@@ -63,7 +63,7 @@ const ClientManual: React.FC = () => {
     <section
       id="manual"
       ref={sectionRef}
-      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-blue-lighter/20 to-blue-lighter/50"
+      className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-blue-lighter/10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">

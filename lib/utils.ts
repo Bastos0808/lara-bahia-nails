@@ -11,7 +11,7 @@ export function smoothScrollTo(elementId: string) {
   const element = document.getElementById(elementId);
   if (!element) return;
 
-  const offset = 80; // Altura da navbar
+  const offset = window.innerWidth < 640 ? 64 : 80; // Altura da navbar (h-16 no mobile, h-20 no desktop)
   const startY = window.pageYOffset || document.documentElement.scrollTop;
   const elementY = element.getBoundingClientRect().top + startY;
   const targetY = Math.max(0, elementY - offset);
