@@ -42,6 +42,7 @@ export default function RootLayout({
       </head>
       <body className={`${montserrat.variable} font-sans`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
